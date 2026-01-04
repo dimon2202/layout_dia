@@ -1,0 +1,87 @@
+.services {
+  &__content {
+    @include page-grid;
+
+    @include on-small-desktop {
+      grid-auto-flow: column;
+    }
+  }
+
+  &__top {
+    margin-bottom: 48px;
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      margin-bottom: 56px;
+      grid-column: 1 / 4;
+    }
+
+    @include on-small-desktop {
+      margin-block: 103px 0;
+      grid-column: 1 / 5;
+    }
+  }
+
+  &__title {
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 100%;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #c0cdd7;
+  }
+
+  &__slogan {
+    margin-block: 16px 24px;
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 130%;
+    color: #253757;
+  }
+
+  &__describe {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #6c788b;
+  }
+
+  &__cards {
+    @include page-grid;
+
+    row-gap: 24px;
+    grid-column: 1 / -1;
+    padding-top: 0;
+
+    @include on-small-desktop {
+      padding-top: 25%;
+      grid-column: 7 / 13;
+    }
+  }
+
+  &__card {
+    position: relative;
+    grid-column: 1 / -1;
+
+    &:hover .card-service {
+      transform: scale(1.1);
+    }
+
+    @include on-tablet {
+      grid-column: span 3;
+    }
+
+    @include on-small-desktop {
+      grid-column: span 6;
+    }
+
+    &:nth-child(2n) {
+      @include on-tablet {
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

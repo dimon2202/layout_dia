@@ -1,0 +1,128 @@
+.card-testimonial {
+  background-color: #fff;
+  border-radius: 16px;
+  padding-block: 32px;
+  cursor: pointer;
+
+  @include page-grid;
+
+  @include on-small-desktop {
+    grid: none;
+  }
+
+  &__wrapper {
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: 2 / -2;
+    }
+  }
+
+  &__image-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 196px;
+    height: 196px;
+    position: relative;
+    margin-inline: auto;
+
+    @include on-tablet {
+      transform: scale(1.3);
+      margin-block: 32px 0;
+    }
+
+    @include on-small-desktop {
+      transform: scale(1);
+      margin-block: 0;
+    }
+
+    @include on-large-screen {
+      transform: scale(1.3);
+      margin-block: 32px 0;
+    }
+  }
+
+  &__rectangle {
+    position: absolute;
+    width: 109px;
+    height: 44px;
+    border-radius: 12px;
+    background-color: #2060f6;
+    transform: rotate(-60deg);
+
+    &:first-of-type {
+      top: 40px;
+      left: 5px;
+    }
+
+    &:last-of-type {
+      bottom: 40px;
+      right: 5px;
+    }
+  }
+
+  &__image {
+    height: 110px;
+    width: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  &__content {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-block: 24px 32px;
+  }
+
+  &__quote {
+    background-image: url(../images/icons/quote.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__text {
+    max-height: 64px;
+    margin-inline: 42px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 150%;
+    letter-spacing: 0;
+    text-align: center;
+    color: #6c788b;
+  }
+
+  &__author {
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__name {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 150%;
+    text-align: center;
+    color: #253757;
+  }
+
+  &__position {
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 100%;
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #c0cdd7;
+  }
+}

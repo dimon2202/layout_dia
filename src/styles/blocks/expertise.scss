@@ -1,0 +1,51 @@
+.expertise {
+  border-radius: 30px;
+  background-color: $c-gray;
+  padding-block: 72px;
+
+  @include on-tablet {
+    padding-block: 128px;
+  }
+
+  &__title {
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 120%;
+    text-align: center;
+    vertical-align: middle;
+    color: #253757;
+    margin-bottom: 56px;
+
+    @include on-tablet {
+      font-size: 64px;
+    }
+  }
+
+  &__cards {
+    @include page-grid;
+
+    row-gap: 56px;
+
+    @include on-tablet {
+      justify-items: center;
+    }
+
+    @include on-small-desktop {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__card {
+    grid-column: span 2;
+
+    @include on-tablet {
+      grid-column: 2 / -2;
+    }
+
+    @include on-small-desktop {
+      width: calc(((100vw - (54px * 2) - (20px * 11)) / 12) * 3 + 20px * 2);
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.hero {
+  position: relative;
+  padding-bottom: 390px;
+  background-color: #2c2c2c;
+  border-radius: 0 0 30px 30px;
+  color: #fff;
+
+  @include on-small-desktop {
+    padding-bottom: 0;
+    padding-top: 38px;
+    height: $desktop-slider-height;
+  }
+
+  &__content {
+    padding-block: 48px;
+
+    @include page-grid;
+
+    @include on-small-desktop {
+      padding-bottom: 0;
+      padding-top: 167px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 120%;
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      font-size: 64px;
+      line-height: 68px;
+    }
+
+    @include on-small-desktop {
+      grid-column: 1 / 6;
+    }
+  }
+
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    margin-block: 32px 72px;
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: span 4;
+    }
+
+    @include on-small-desktop {
+      grid-column: 1 / 6;
+    }
+  }
+
+  &__button {
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: span 3;
+    }
+
+    @include on-small-desktop {
+      grid-column: 1 / 4;
+    }
+  }
+}

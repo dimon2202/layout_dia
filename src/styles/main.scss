@@ -1,7 +1,22 @@
 @import 'utils';
 @import 'fonts';
+@import 'blocks';
 @import 'typography';
 
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+
 body {
-  background: $c-gray;
+  margin: 0;
+  background: $gray;
+}
+
+main > div:not(:first-of-type) {
+  margin-block: 120px;
+
+  @include on-tablet {
+    margin-block: 148px;
+  }
 }
