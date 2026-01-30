@@ -30,7 +30,7 @@
       href="./styles/main.scss"
     />
   </head>
-  <body>
+  <body class="page">
     <header class="header">
       <div class="container">
         <div class="top-menu">
@@ -47,8 +47,8 @@
             <div class="top-menu__nav-burger">
               <div class="top-menu__icon">
                 <a
-                  href="#"
-                  class="icon"
+                  href="#menu"
+                  class="icon icon--menu"
                 ></a>
               </div>
             </div>
@@ -91,13 +91,85 @@
           </nav>
           <a
             href="#footer"
-            class="top-menu__hire-us"
+            class="hire-us"
           >
             Hire us
           </a>
         </div>
       </div>
     </header>
+
+    <aside
+      class="page__menu menu"
+      id="menu"
+    >
+      <div class="container">
+        <div class="menu__top">
+          <a href="#">
+            <img
+              src="./images/logo/dia-logo.svg"
+              alt="Logo MyBike"
+            />
+          </a>
+          <a
+            href="#"
+            class="icon icon--close"
+          ></a>
+        </div>
+
+        <nav class="menu__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a
+                href="#expertise"
+                class="nav__link"
+              >
+                About us
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#"
+                class="nav__link"
+              >
+                Home
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#testimonial"
+                class="nav__link"
+              >
+                Work
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#services"
+                class="nav__link"
+              >
+                Services
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#footer"
+                class="nav__link"
+              >
+                Contact Us
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <a
+          href="#footer"
+          class="menu__hire-us hire-us"
+        >
+          Hire us
+        </a>
+      </div>
+    </aside>
 
     <main>
       <div class="hero">

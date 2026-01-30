@@ -2,7 +2,14 @@
   display: inline-block;
   width: 24px;
   height: 24px;
-  background-image: url('../images/icons/menu-icon.svg');
   background-size: cover;
   background-position: center;
+
+  &--menu {
+    background-image: url('../images/icons/menu-icon.svg');
+  }
+
+  &--close {
+    background-image: url('../images/icons/close-icon.svg');
+  }
 }

@@ -1,0 +1,33 @@
+.page {
+  height: 100vh;
+
+  &:has(.page__menu:target) {
+    overflow: hidden;
+    animation: 0.8s delay-overflow;
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    transition: all $effectDuration;
+    opacity: 0;
+    transform: translateX(-100%);
+    pointer-events: none;
+
+    &:target {
+      opacity: 1;
+      transform: translate(0);
+      pointer-events: all;
+      z-index: 1;
+    }
+  }
+}
+
+@keyframes delay-overflow {
+  from {
+    overflow: auto;
+  }
+}
